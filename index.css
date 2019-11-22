@@ -10,6 +10,19 @@ body {
   background: #e3eff4;
 }
 /* START NAV BAR CSS */
+#header{
+  background-image: linear-gradient(260deg, #384e77 50%, #42aaff 130%);
+  /* padding: 50px 10px; Some padding */
+  color: black;
+  text-align: center; /* Centered text */
+  font-size: 90px; /* Big font size */
+  font-weight: bold;
+  position: fixed; /* Fixed position - sit on top of the page */
+  top: 0;
+  width: 100%; /* Full width */
+  transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
+}
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -45,18 +58,16 @@ body {
 }
 
 .navLink,
-.logo {
-  display: inline-block;
+.logo #header{
   font-size: 1rem;
-  margin-top: 0.5%;
+  margin-top: 1vh;
   margin-left: 1%;
   text-decoration: none;
   color: #e3eff4;
 }
 
-.logo-contain img{
-  height: 50vh;
-  width: auto;
+#home{
+  padding-top: 10%;
 }
 /* END NAVBAR CSS */
 
