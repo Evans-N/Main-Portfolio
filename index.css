@@ -9,67 +9,6 @@ body {
   color: #2b2d42;
   background: #e3eff4;
 }
-/* START NAV BAR CSS */
-#header{
-  background-image: linear-gradient(260deg, #384e77 50%, #42aaff 130%);
-  /* padding: 50px 10px; Some padding */
-  color: black;
-  text-align: center; /* Centered text */
-  font-size: 90px; /* Big font size */
-  font-weight: bold;
-  position: fixed; /* Fixed position - sit on top of the page */
-  top: 0;
-  width: 100%; /* Full width */
-  transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
-}
-
-.navbar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  font-size: 1rem;
-  background-image: linear-gradient(260deg, #384e77 50%, #42aaff 130%);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  padding-bottom: 1%;
-}
-
-.navbar-toggle {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 24px;
-}
-
-.mainNav {
-  list-style-type: none;
-  display: none;
-  list-style-type: none;
-}
-
-.active {
-  display: block;
-}
-
-.mainNav li {
-  text-align: center;
-  margin: 1% auto;
-}
-
-.navLink,
-.logo #header{
-  font-size: 1rem;
-  margin-top: 1vh;
-  margin-left: 1%;
-  text-decoration: none;
-  color: #e3eff4;
-}
-
-#home{
-  padding-top: 10%;
-}
-/* END NAVBAR CSS */
 
 /* START ABOUT PAGE CSS */
 .about-section-inner {

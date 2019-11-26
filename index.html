@@ -9,31 +9,31 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <script src="https://kit.fontawesome.com/7b9f62900c.js"></script>
 
 </head>
 <body>
     <header> 
-        <nav id='header' class="navbar hover-effect">
-            <span class="navbar-toggle" id="js-navbar-toggle">
-                <i class="fas fa-angle-double-down"></i>            
-            </span>
-            <ul class="mainNav" id="js-menu">
-                <li>
-                    <a href="#about" class="navLink">About</a>
-                </li>
-                <li>
-                    <a href="#resume" class="navLink">Resume</a>
-                </li>
-                <li>
-                    <a href="#projects" class="navLink">Projects</a>
-                </li>
-                <li>
-                    <a href="#contact" class="navLink">Contact</a>
-                </li>
-            </ul>
+        <nav>
+            <div class="nav-wrapper indigo">
+                <a href="#home" class="brand-logo">Nathan Evans</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#resume">My Skills</a></li>
+                    <li><a href="#projects">Fresh Ideas</a></li>
+                    <li><a href="#contact">Get in Touch</a></li>
+                </ul>
+            </div>
         </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#resume">My Skills</a></li>
+            <li><a href="#projects">Fresh Ideas</a></li>
+            <li><a href="#contact">Get in Touch</a></li>
+        </ul>
     </header>
     <main>
         <section id="home">
@@ -154,7 +154,19 @@
         <section id='projects'>
             <h1 style="color: #e3eff4"><strong>Projects</strong></h1><br><hr>
             <div class="container" style="width: 100%; height: 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: center;">
-            
+                <div class="card sticky-action small">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./html-images/Screen Shot 2019-09-16 at 5.25.02 PM.png" alt="Screenshot of Backend project">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">TRVLR (Node/Express)<i class="material-icons right">more_vert</i></span>
+                        <p><a href="https://homecookd.us">Live Demo App</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Homecookd (React/Redux)<i class="material-icons right">close</i></span>
+                        <p>Built in React/Redux, and utilizing Auth0, Google Maps, and Stripe Payments. This app is an infastructure used to engage communities in food driven events.</p>
+                    </div>
+                </div>
                 <a class="card2" href="https://github.com/Evans-N/DC-Backend-Project">
                     <div class="project-image-container">
                         <img src="./html-images/Screen Shot 2019-09-16 at 5.25.02 PM.png" alt="Screenshot of backend project">
@@ -168,6 +180,19 @@
                         </div>
                     </div>
                 </a>
+                <div class="card sticky-action small">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./html-images/Screen Shot 2019-10-22 at 10.41.49 AM.png" alt="Screenshot of capstone project">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Homecookd (React/Redux)<i class="material-icons right">more_vert</i></span>
+                        <p><a href="https://homecookd.us">Live Demo App</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Homecookd (React/Redux)<i class="material-icons right">close</i></span>
+                        <p>Built in React/Redux, and utilizing Auth0, Google Maps, and Stripe Payments. This app is an infastructure used to engage communities in food driven events.</p>
+                    </div>
+                </div>
                 <a class="card2" href="https://homecookd.us">
                     <div class="project-image-container">
                         <img src="./html-images/Screen Shot 2019-10-22 at 10.41.49 AM.png" alt="Screenshot of backend project">
@@ -197,6 +222,6 @@
     <footer>
     </footer>
     <script src="./index.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
