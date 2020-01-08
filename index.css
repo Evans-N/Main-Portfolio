@@ -12,17 +12,12 @@ body {
 
 /* START ABOUT PAGE CSS */
 .about-section-inner {
-  background-color: #384e77;
   display: flex;
   flex-direction: column;
   margin: 1.5%;
 }
-.about-section-inner h2 {
-  text-align: center;
-}
 
 .profile-card-action-icons {
-  background-color: #384e77;
   color: #e3eff4;
   font-weight: 400;
   margin-bottom: 1.6rem;
@@ -32,7 +27,7 @@ body {
 }
 
 .profile-card-action-icons .card-section {
-  background-color: #384e77;
+  /* background-color: #384e77; */
   padding: 0.5rem 0 0;
 }
 
@@ -113,10 +108,6 @@ body {
   text-transform: uppercase;
 }
 
-.profile-card-action-icons .card-section .profile-card-about .separator-left {
-  text-align: left;
-}
-
 .profile-card-action-icons
   .card-section
   .profile-card-about
@@ -148,7 +139,7 @@ body {
   .separator-left::after {
   position: relative;
   width: 3rem;
-  border-bottom: 0.125rem solid #42aaff;
+  border-bottom: 0.125rem solid #ff8f2d;
   margin: 0.3rem auto 0;
   margin-left: 0;
 }
@@ -182,7 +173,7 @@ body {
   size: 2px;
   font-family: "FontAwesome";
   float: left;
-  color: #42aaff;
+  color: #ff8f2d;
   margin-right: 0.5rem;
 }
 
@@ -222,7 +213,7 @@ body {
   .action-area
   .action-anchor
   .fa {
-  color: #1779ba;
+  color: #ff8f2d;
 }
 /* END OF ABOUT PAGE CSS */
 
@@ -238,12 +229,11 @@ body {
   content: "\f105";
   size: 2px;
   font-family: "FontAwesome";
-  color: #42aaff;
+  color: #ff8f2d;
   margin-right: 0.5rem;
 }
 
 .portfolio-resume {
-  background: #384e77;
   color: #e3eff4;
 }
 
@@ -253,6 +243,8 @@ body {
 
 .portfolio-resume-wrapper {
   padding: 2rem 4rem;
+  color: #e3eff4;
+
 }
 
 .portfolio-resume-headshot {
@@ -272,7 +264,7 @@ body {
   margin-bottom: 0.75rem;
 }
 
-.portfolio-resume-contact-info a {
+.portfolio-resume-contact-info a{
   color: #e3eff4;
 }
 
@@ -284,14 +276,29 @@ body {
 }
 /* END OF RESUME CSS */
 
-
+.projects-section{
+  display: flex;
+  flex-direction: column;
+  margin: 1.5%;
+}
+.projects-section h1 {
+  color: #e3eff4;
+  margin-left: 3%;
+  margin-top: 1%;
+}
+#project-card{
+  margin-top: 2%;
+  border-radius: 5%;
+}
+#project-image{
+  margin-top: 2%;
+  border-radius: 5%;
+}
 
 
 .contact-section-inner {
   display: flex;
   flex-direction: column;
-  text-align: left;
-  background: #384e77;
   margin: 1.5%;
 }
 
@@ -380,4 +387,43 @@ body {
   background: #fefefe;
   border-color: #000000;
 }
+
+.rounded-social-buttons .social-button.phone {
+  background: #0fb800;
+}
+
+.rounded-social-buttons .social-button.phone:before {
+  font-family: "FontAwesome";
+  content: "\f095";
+}
+
+.rounded-social-buttons .social-button.phone:hover,
+.rounded-social-buttons .social-button.phone:focus {
+  color: #0fb800;
+  background: #fefefe;
+  border-color: #0fb800;
+}
+
+.rounded-social-buttons .social-button.text {
+  background: #d76400;
+}
+
+.rounded-social-buttons .social-button.text:before {
+  font-family: "Quicksand";
+  font-size: 85%;
+  content: "SMS";
+}
+
+.rounded-social-buttons .social-button.text:hover,
+.rounded-social-buttons .social-button.text:focus {
+  color: #d76400;
+  background: #fefefe;
+  border-color: #d76400;
+}
 /* END OF CONTACT US PAGE CSS */
+
+@media screen and (max-width: 420px){
+  h1, h2, h3, h4{
+    text-align: center;
+  }
+}
