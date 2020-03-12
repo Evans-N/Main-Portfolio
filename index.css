@@ -1,15 +1,93 @@
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
 }
 
 body {
   font-family: "Quicksand", sans-serif;
-  color: #2b2d42;
-  background: #e3eff4;
+  background-color: #2f5470;
+  color: #e3eff4;
 }
+main{
+  margin-left: 35%;
+}
+/* *****Sidebar***** */
+#sidenav{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  height: 100vh;
+  width: 35%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  padding-left: 3%;
+  background-color: #2f5470;
+  color: #e3eff4;
+}
+#sidenav-title{
+  font-size: 6rem;
+}
+#load-screen{
+  position: fixed;
+  top: 90vh;
+  right: 35%;
+  z-index: -1;
+  font-size: 3rem;
+}
+#arrow{
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+  animation-name: bounce;
+  animation-timing-function: cubic-bezier(.280, .840, .420, 1);
+  color: #e3eff4;
+  
+}
+@keyframes bounce {
+  0%   { transform: scale(1,1)      translateY(0); }
+  10%  { transform: scale(1.1,.9)   translateY(0); }
+  30%  { transform: scale(.9,1.1)   translateY(-50px); }
+  50%  { transform: scale(1.05,.95) translateY(0); }
+  57%  { transform: scale(1,1)      translateY(-7px); }
+  64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
+}
+#about{
+  position: relative;
+  top: 100vh;
+  background-color: #2f5470;
+}
+#about-card{
+  background-color: #2f5470;
+  box-shadow: none;
+}
+#image-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.profile-image{
+  border-radius: 25%;
+  padding-top: 3%;
+  padding-right: 5%;
+  max-width: min-content;
+}
+#resume{
+  position: relative;
+  top: 100vh;
+  background-color: #2f5470;
+}
+#row{
+  margin-bottom: 0;
+  padding-bottom: 5%;
+}
+#projects{
+  position: relative;
+  top: 100vh;
+  background-color: #2f5470;
 
+}
 .card-user-profile {
   position: relative;
   z-index: 0;
@@ -19,12 +97,10 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 1.5%;
   border: 0;
   border-radius: 0;
   box-shadow: none;
   overflow: hidden;
-  color: #e3eff4;
 }
 
 .card-user-profile > :last-child {
@@ -45,8 +121,7 @@ body {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
   padding: 1rem;
-  background: #e3eff4;
-  background: #e3eff4;
+
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -75,334 +150,83 @@ max-height: 40vh;
   max-width: 20vw;
   max-height: auto;
   border-radius: 50%;
-  box-shadow: 0px 8px 25px 19px rgba(0,0,0,0.74);;
 }
 
 .card-user-profile-name {
   margin-bottom: 0;
   font-weight: 300;
-  font-size: 1.5rem;
-}
-
-.card-user-profile-button {
-  margin-bottom: 0;
-  -webkit-flex: 1 0 0;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0;
-}
-
-.card-user-profile-button + .card-user-profile-button {
-  margin-left: 1rem;
-}
-
-.card-user-profile-info {
-  font-size: 0.875rem;
-  letter-spacing: 1px;
-  opacity: 0.8;
+  
 }
 
 /* START ABOUT PAGE CSS */
 .about-section-inner {
   display: flex;
   flex-direction: column;
-  margin: 1.5%;
 }
-
-.profile-card-action-icons {
-  color: #e3eff4;
-  font-weight: 400;
-  margin-bottom: 1.6rem;
-  border-radius: 0.125rem;
-  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.18),
-    0 0.125rem 2px rgba(0, 0, 0, 0.36);
-}
-
-.profile-card-action-icons .card-section {
-  padding: 0.5rem 0 0;
-}
-
-.profile-card-action-icons .card-section .profile-card-header,
-.profile-card-action-icons .card-section .profile-card-about {
-  border-bottom: 0.0625rem solid #e3eff4;
-  padding: 0.7rem 1rem;
-}
-
-.profile-card-action-icons .card-section .profile-card-header {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-}
-
-.profile-card-action-icons
-  .card-section
-  .profile-card-header
-  .profile-card-avatar {
-  margin-right: 0.5rem;
-}
-
-.profile-card-action-icons
-  .card-section
-  .profile-card-header
-  .profile-card-avatar
-  .avatar-image {
-  border-radius: 50%;
-  width: 3.75rem;
-  height: 3.75rem;
-}
-
-.profile-card-action-icons
-  .card-section
-  .profile-card-header
-  .profile-card-author {
-  -webkit-flex: 1 0 0;
-  -ms-flex: 1 0 0px;
-  flex: 1 0 0;
-  margin-top: 0.3rem;
-  padding-bottom: 0;
-}
-
-.profile-card-action-icons
-  .card-section
-  .profile-card-header
-  .profile-card-author
-  .author-title,
-.profile-card-action-icons
-  .card-section
-  .profile-card-header
-  .profile-card-author
-  .author-description {
-  margin-bottom: 0;
-}
-
-.profile-card-action-icons
-  .card-section
-  .profile-card-header
-  .profile-card-author
-  .author-title {
-  color: #e3eff4;
-}
-
-.profile-card-action-icons
-  .card-section
-  .profile-card-header
-  .profile-card-author
-  .author-description {
-  color: #a09898;
-  font-size: 0.9em;
-}
-
-.profile-card-action-icons .card-section .profile-card-about .about-title {
-  text-transform: uppercase;
-}
-
-.profile-card-action-icons
-  .card-section
-  .profile-card-about
-  .separator-left::before,
-.profile-card-action-icons
-  .card-section
-  .profile-card-about
-  .separator-left::after {
-  display: table;
-  content: " ";
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-}
-
-.profile-card-action-icons
-  .card-section
-  .profile-card-about
-  .separator-left::after {
-  clear: both;
-}
-
-.profile-card-action-icons
-  .card-section
-  .profile-card-about
-  .separator-left::after {
-  position: relative;
-  width: 3rem;
-  border-bottom: 0.125rem solid #ff8f2d;
-  margin: 0.3rem auto 0;
-  margin-left: 0;
-}
-
-.profile-card-action-icons .card-section .profile-card-about .about-content {
-  margin-bottom: 0;
-}
-
-.profile-card-action-icons .card-section .profile-card-about .about-skills {
-  margin-top: 0.6rem;
-}
-
-.profile-card-action-icons
-  .card-section
-  .profile-card-about
-  .about-skills
-  ul.arrow {
-  list-style-type: none;
-  padding-left: 0;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-.profile-card-action-icons
-  .card-section
-  .profile-card-about
-  .about-skills
-  ul.arrow
-  li:before {
-  content: "\f105";
-  size: 2px;
-  font-family: "FontAwesome";
-  float: left;
-  color: #ff8f2d;
-  margin-right: 0.5rem;
-}
-
-.profile-card-action-icons .card-section .profile-card-action {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.profile-card-action-icons .card-section .profile-card-action .action-area {
-  width: 20%;
-  border-right: 0.0625rem solid #cacaca;
-  text-align: center;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-}
-
-.profile-card-action-icons
-  .card-section
-  .profile-card-action
-  .action-area:last-of-type {
-  border-right: none;
-}
-
-.profile-card-action-icons
-  .card-section
-  .profile-card-action
-  .action-area
-  .action-anchor.has-tip {
-  border-bottom: none;
-  cursor: pointer;
-}
-
-.profile-card-action-icons
-  .card-section
-  .profile-card-action
-  .action-area
-  .action-anchor
-  .fa {
-  color: #ff8f2d;
+.about-content {
+  font-size: 1.25rem;
+  padding-right: 3%;
 }
 /* END OF ABOUT PAGE CSS */
 
 /* START OF RESUME CSS */
-.resume-section-inner {
-  margin: 1.5%;
-}
-.portfolio-resume-spacing {
-  margin-bottom: 2rem;
-}
-
 .portfolio-resume-spacing li::before {
   content: "\f105";
   size: 2px;
   font-family: "FontAwesome";
-  color: #ff8f2d;
-  margin-right: 0.5rem;
+  color: #e3eff4;
+  padding-right: 0.5rem;
 }
-
 .portfolio-resume {
   color: #e3eff4;
 }
-
 .devicons {
-  font-size: 300%;
+  font-size: 5rem;
 }
-
-.portfolio-resume-wrapper {
-  padding: 2rem 4rem;
-  color: #e3eff4;
-
-}
-
-.portfolio-resume-headshot {
-  margin-bottom: 2rem;
-  border-radius: 50%;
-}
-
 .portfolio-resume-header {
   text-transform: uppercase;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #e6e6e6;
   font-weight: bold;
-  margin-bottom: 1rem;
+  font-size: 4rem;
 }
-
-.portfolio-resume-contact-info {
-  margin-bottom: 0.75rem;
+.resume-content-header{
+  font-size: 3rem;
 }
-
-.portfolio-resume-contact-info a{
-  color: #e3eff4;
-}
-
-.portfolio-resume-contact-info .fa .fab {
-  font-size: 1.4rem;
-  padding-right: 0.8rem;
-  vertical-align: middle;
-  color: #0a0a0a;
+.resume-content{
+  font-size: 1.25rem;
 }
 /* END OF RESUME CSS */
 
 .projects-section{
   display: flex;
   flex-direction: column;
-  margin: 1.5%;
 }
-.projects-section h1 {
-  color: #e3eff4;
-  margin-left: 3%;
-  margin-top: 1%;
+.project-title{
+  font-size: 4rem;
 }
+
 #project-card{
   margin-top: 2%;
   border-radius: 5%;
+  height: auto;
 }
 #project-image{
-  margin-top: 2%;
+  margin-top: 1%;
+  padding-bottom: 2%;
   border-radius: 5%;
 }
-
-
-.contact-section-inner {
-  display: flex;
-  flex-direction: column;
-  margin: 1.5%;
+#card-image-container{
+  max-height: 100%;
 }
-
-.contact-section-inner h2 {
-  color: #e3eff4;
-  margin-left: 3%;
-  margin-top: 1%;
+.card-content{
+  color: #2f5470;
 }
-
+.card-reveal{
+  color: #2f5470;
+}
 .rounded-social-buttons {
   margin: 1.5%;
-  text-align: center;
 }
-
 .rounded-social-buttons .social-button {
   display: inline-block;
   position: relative;
@@ -512,8 +336,51 @@ max-height: 40vh;
 }
 /* END OF CONTACT US PAGE CSS */
 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 1010px){
+  main{
+    margin: 0;
+    padding-left: 3%;
+  }
   h1, h2, h3, h4{
     text-align: center;
+  }
+  #sidenav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: auto;
+    width: auto;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    padding-left: 0;
+    background-color: #2f5470;
+    color: #e3eff4;
+  }
+  #sidenav-title{
+    margin: 0;
+    font-size: 4rem;
+  }
+  #sidenav-content{
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  #load-screen{
+    top: 85vh;
+    left: 46%;
+  }
+  #about{
+    top: 110vh;
+  }
+  #resume{
+    top: 110vh;
+  }
+  #projects{
+    top: 110vh;
+  }
+  .profile-image{
+    padding: 0;
+    border-radius: 50%;
   }
 }
